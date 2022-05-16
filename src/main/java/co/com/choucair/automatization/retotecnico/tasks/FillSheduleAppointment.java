@@ -38,9 +38,8 @@ public class FillSheduleAppointment implements Task {
                 Enter.theValue(data.get(0).getStrIdDocumentPatient()).into(FIELD_ID_DOCUMENT_PATIENT),
                 Click.on(FIELD_ID_DOCUMENT_DOCTOR),
                 Enter.theValue(data.get(0).getStrIdDocumentDoctor()).into(FIELD_ID_DOCUMENT_DOCTOR),
-
-               // Click.on(FIELD_OBSERVATIONS),
-               // Enter.theValue(data.get(0).getStrObservations()).into(FIELD_OBSERVATIONS),
+                Click.on(FIELD_OBSERVATIONS),
+                Enter.theValue(data.get(0).getStrObservations()).into(FIELD_OBSERVATIONS),
                 Click.on(BUTTON_SAVE)
 
         );

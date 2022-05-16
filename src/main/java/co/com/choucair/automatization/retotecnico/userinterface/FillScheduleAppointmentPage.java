@@ -16,7 +16,7 @@ public class FillScheduleAppointmentPage {
             .locatedBy("//div[@class='col-md-4']/div[3]/input[@class='form-control']");
 
     public static final Target FIELD_OBSERVATIONS  = Target.the("Field observations")
-            .locatedBy("textarea");
+            .locatedBy("//textarea[@class='form-control']");
 
     public static final Target BUTTON_SAVE = Target.the("Button save")
             .locatedBy(".btn");
