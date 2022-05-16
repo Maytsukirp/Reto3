@@ -8,32 +8,31 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-
 import java.util.List;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class RegisterDoctorStepDefinition {
 
     @Before
     public void setState(){
-        OnStage.setTheStage(new OnlineCast());
+        setTheStage(new OnlineCast());
     }
 
 
     @Given("^Carlos needs to register a new doctor$")
     public void carlosNeedsToRegisterANewDoctor() {
-        OnStage.theActorCalled("Carlos").wasAbleTo(OpenTheHerokapp.inTheDoctorInterface());
+        theActorCalled("Carlos").wasAbleTo(OpenTheHerokapp.inTheDoctorInterface());
 
     }
 
 
     @When("^He registers the new doctor in the Hospital Administration application$")
     public void heRegistersTheNewDoctorInTheHospitalAdministrationApplication(List<HerokappData> data) {
-        OnStage.theActorInTheSpotlight().attemptsTo(FillDoctorsInformation.onAddDoctor(data));
+        theActorInTheSpotlight().attemptsTo(FillDoctorsInformation.onAddDoctor(data));
 
     }
 

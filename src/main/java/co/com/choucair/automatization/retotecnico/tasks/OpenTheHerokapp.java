@@ -2,7 +2,6 @@ package co.com.choucair.automatization.retotecnico.tasks;
 
 import co.com.choucair.automatization.retotecnico.userinterface.OpenTheHerokappPage;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
@@ -44,6 +43,6 @@ public class OpenTheHerokapp implements Task {
         }else{
             actor.attemptsTo(Click.on(BOTTON_SCHEDULE_APPOINTMENT));
         }
-        };
+        }
     }
 
